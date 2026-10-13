@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <link rel="icon" type="image/x-icon" href="img/brands/favicon.ico"> 
+    <!-- Apple Touch Icon --> 
+    <link rel="apple-touch-icon" href="img/brands/favicon.ico">
+
+    <!-- Google Web Fonts -->
+    <link href="css/font.css" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="css/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <title>AQUACARE TECH SOLUTIONS</title>
+    <style>
+    /* Mobile navbar */
+    @media (max-width: 991.98px) {
+        .navbar {
+            position: fixed !important;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1050;
+            background: #fff !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .orderNow
+        {
+            margin-top: 20px;
+        }
+
+        body {
+            padding-top: 80px;
+        }
+
+        /* Active mobile navigation link */
+        .navbar .navbar-nav .nav-link.active,
+        .navbar .navbar-nav .dropdown-item.active {
+            color: var(--bs-primary) !important;
+            font-weight: 700 !important;
+            background-color: rgba(13, 110, 253, 0.08) !important;
+        }
+
+        .navbar .navbar-nav .nav-link.active {
+            border-left: 3px solid var(--bs-primary);
+            padding-left: 12px;
+        }
+    }
+
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px;
+    }
+
+    #home,
+    #about,
+    #services,
+    #products,
+    #blog,
+    #products,
+    #contact,
+    #owner {
+        scroll-margin-top: 100px;
+    }
+</style>
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                <h1 class="text-primary"><img src="img/brands/logo.png" alt="Logo"></i><img
+                        src="img/brands/brand_name.png" alt=""></h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="#home" class="nav-item nav-link">Home</a>
+                    <a href="#about" class="nav-item nav-link">About</a>
+                    <a href="#services" class="nav-item nav-link">Service</a>
+                    <a href="#products" class="nav-item nav-link">Products</a>
+                    <a href="#blog" class="nav-item nav-link">Blog</a>
+                    <a href="#contact" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="d-none d-xl-flex me-3">
+                    <div class="d-flex flex-column pe-3 border-end border-primary">
+                        <span class="text-body">Get Free Consultant</span>
+                        <a href="tel:+919471377638"><span class="text-primary">Free: + 91 9471377638</span></a>
+                    </div>
+                </div>
+                <a href="" class="btn btn-primary rounded-pill d-inline-flex flex-shrink-0 py-2 px-4 orderNow">Order Now</a>
+            </div>
+        </nav>
+
+        <!-- Search Modal Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content border-0 rounded-4 shadow">
+
+                    <div class="modal-header border-0 px-4 pt-4">
+                        <h4 class="modal-title mb-0" id="searchModalLabel">
+                            <i class="fa fa-search text-primary me-2"></i>Search
+                        </h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body px-4 pb-4">
+                        <div class="input-group">
+                            <input type="search" class="form-control py-3 px-3"
+                                placeholder="Search services, products..." aria-label="Search">
+                            <button class="btn btn-primary px-4" type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+
+                        <div class="mt-3 text-muted small">
+                            <i class="fa fa-info-circle me-1"></i>
+                            Search for Sales, Services, Installation, AMC and more.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Search Modal End -->
+        <!-- Carousel Start -->
+        <div class="carousel-header" id="home">
+            <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#carouselId" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#carouselId" data-bs-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <img src="img/carousel-1.jpg" class="img-fluid w-100" alt="Image">
+                        <div class="carousel-caption-1">
+                            <div class="carousel-caption-1-content" style="max-width: 900px;">
+                                <h4 class="text-white text-uppercase fw-bold mb-4 fadeInLeft animated"
+                                    data-animation="fadeInLeft" data-delay="1s" style="animation-delay: 1s;"
+                                    style="letter-spacing: 3px;">PURE WATER. BETTER LIFE.</h4>
+                                <h3 class="display-2 text-capitalize text-white mb-2 fadeInLeft animated"
+                                    data-animation="fadeInLeft" data-delay="1.3s" style="animation-delay: 1.3s;">
+                                    Advanced RO Water Purifiers for a Healthier Home</h3>
+                                <p class="mb-2 fs-7 text-white fadeInLeft animated" data-animation="fadeInLeft"
+                                    data-delay="1.5s" style="animation-delay: 1.5s;">Get reliable water purification
+                                    solutions with professional installation, service and maintenance from AquaCare Tech
+                                    Solutions.</p>
+                                <div class="carousel-caption-1-content-btn fadeInLeft animated"
+                                    data-animation="fadeInLeft" data-delay="1.7s" style="animation-delay: 1.7s;">
+                                    <a class="btn btn-primary rounded-pill flex-shrink-0 py-3 px-5 me-2" href="#products">View
+                                        Products</a>
+                                    <a class="btn btn-secondary rounded-pill flex-shrink-0 py-3 px-5 ms-2" href="https://wa.me/919471377638">Book
+                                        a Service</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/carousel-2.jpg" class="img-fluid w-100" alt="Image">
+                        <div class="carousel-caption-2">
+                            <div class="carousel-caption-2-content" style="max-width: 900px;">
+                                <h4 class="text-white text-uppercase fw-bold mb-4 fadeInRight animated"
+                                    data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;"
+                                    style="letter-spacing: 3px;">PROFESSIONAL RO SERVICES</h4>
+                                <h1 class="display-2 text-capitalize text-white mb-4 fadeInRight animated"
+                                    data-animation="fadeInRight" data-delay="1.3s" style="animation-delay: 1.3s;">
+                                    Complete RO Sales, Installation & Repair Services</h1>
+                                <p class="mb-2 fs-5 text-white fadeInRight animated" data-animation="fadeInRight"
+                                    data-delay="1.5s" style="animation-delay: 1.5s;">From new RO installation to filter
+                                    replacement
+                                    and repairs, our experienced team helps keep
+                                    your water purifier performing at its best.
+                                </p>
+                                <div class="carousel-caption-2-content-btn fadeInRight animated"
+                                    data-animation="fadeInRight" data-delay="1.7s" style="animation-delay: 1.7s;">
+                                    <a class="btn btn-primary rounded-pill flex-shrink-0 py-3 px-5 me-2" href="https://wa.me/919471377638">Book a
+                                        Service</a>
+                                    <a class="btn btn-secondary rounded-pill flex-shrink-0 py-3 px-5 ms-2"
+                                        href="tel:+919471377638">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon btn btn-primary fadeInLeft animated" aria-hidden="true"
+                        data-animation="fadeInLeft" data-delay="1.1s" style="animation-delay: 1.3s;"> <i
+                            class="fa fa-angle-left fa-3x"></i></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                    <span class="carousel-control-next-icon btn btn-primary fadeInRight animated" aria-hidden="true"
+                        data-animation="fadeInLeft" data-delay="1.1s" style="animation-delay: 1.3s;"><i
+                            class="fa fa-angle-right fa-3x"></i></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- Carousel End -->
+    </div>
+    <!-- Navbar & Hero End -->
+
+    <!-- Feature Start -->
+    <div class="container-fluid feature bg-light py-5">
+        <div class="container py-5">
+
+            <!-- Section Heading -->
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-uppercase text-primary">Why Choose AquaCare Tech Solutions</h4>
+
+                <h1 class="display-3 text-capitalize mb-3">Trusted RO Water Purifier Solutions</h1>
+
+                <p class="mb-0">
+                    We provide reliable RO water purifier solutions
+                    with professional installation, expert service,
+                    genuine replacement filters and affordable AMC plans.
+                </p>
+            </div>
+
+
+            <!-- Features -->
+            <div class="row g-4 align-items-stretch">
+                <!-- Feature 1 -->
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="feature-item p-4 h-100 d-flex flex-column">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-hand-holding-water text-white fa-3x"></i>
+                        </div>
+                        <a href="services" class="h4 mb-3 d-block"> Quality Service </a>
+
+                        <p class="mb-3">
+                            Professional RO installation, servicing and maintenance to keep your water purifier working
+                            efficiently.
+                        </p>
+
+                        <!-- <a href="services" class="btn text-secondary mt-auto align-self-start">Read More<i
+                                class="fa fa-angle-right"></i></a> -->
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="feature-item p-4 h-100 d-flex flex-column">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-filter text-white fa-3x"></i>
+                        </div>
+                        <a href="services" class="h4 mb-3 d-block"> Advanced Filtration</a>
+
+                        <p class="mb-3">
+                            Get suitable RO purification solutions with
+                            advanced filtration technology for cleaner and safer drinking water.
+                        </p>
+
+                        <!-- <a href="services" class="btn text-secondary mt-auto align-self-start">Read More<i
+                                class="fa fa-angle-right"></i></a> -->
+                    </div>
+                </div>
+                <!-- Feature 3 -->
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="feature-item p-4 h-100 d-flex flex-column">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-tools text-white fa-3x"></i>
+                        </div>
+                        <a href="tel:+919471377638" class="h4 mb-3 d-block"> Expert Repair</a>
+
+                        <p class="mb-3">
+                            Our skilled technicians provide reliable RO repair,
+                            filter replacement and maintenance services for different purifier brands.
+                        </p>
+
+                        <!-- <a href="services" class="btn text-secondary mt-auto align-self-start">Read More<i
+                                class="fa fa-angle-right"></i></a> -->
+                    </div>
+                </div>
+                <!-- Feature 4 -->
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="feature-item p-4 h-100 d-flex flex-column">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-calendar-check text-white fa-3x"></i>
+                        </div>
+
+                        <a href="amc" class="h4 mb-3 d-block">Affordable AMC</a>
+
+                        <p class="mb-3">
+                            Protect your RO purifier with affordable AMC plans
+                            that include regular servicing, maintenance and
+                            filter checks.
+                        </p>
+
+                        <!-- <a href="amc" class="btn text-secondary mt-auto align-self-start">View AMC<i
+                                class="fa fa-angle-right"></i></a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+
+    <!-- About Start -->
+    <div class="container-fluid about overflow-hidden py-5" id="about">
+        <div class="container py-5">
+            <div class="row g-5">
+
+                <!-- About Image -->
+                <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="about-img rounded h-100">
+                        <img src="img/about.jpg" class="img-fluid rounded h-100 w-100" style="object-fit: cover;"
+                            alt="AquaCare Tech Solutions RO Water Purifier Service">
+                        <div class="about-exp"><span>Trusted RO Service</span></div>
+                    </div>
+                </div>
+
+                <!-- About Content -->
+                <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="about-item">
+
+                        <h4 class="text-primary text-uppercase">About AquaCare Tech</h4>
+
+                        <h1 class="display-3 mb-3">Your Trusted Partner for Pure and Safe Drinking Water</h1>
+
+                        <p class="mb-4">
+                            AquaCare Tech Solutions provides reliable RO water purifier solutions for homes,
+                            offices and businesses. We offer quality RO purifiers, professional installation,
+                            expert repair, filter replacement and affordable annual maintenance services.
+                        </p>
+
+                        <!-- Feature 1 -->
+                        <div class="bg-light rounded p-4 mb-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="d-flex">
+
+                                        <div class="pe-4">
+                                            <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center"
+                                                style="width: 80px; height: 80px;">
+                                                <i class="fas fa-tint text-white fa-2x"></i>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <a href="tel:+919471377638" class="h4 d-inline-block mb-3">Reliable RO Services</a>
+                                            <p class="mb-0">
+                                                Our experienced team provides professional RO installation,
+                                                servicing, repair and filter replacement to keep your purifier
+                                                performing efficiently.
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Feature 2 -->
+                        <div class="bg-light rounded p-4 mb-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="d-flex">
+
+                                        <div class="pe-4">
+                                            <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center"
+                                                style="width: 80px; height: 80px;">
+                                                <i class="fas fa-faucet text-white fa-2x"></i>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <a href="#products" class="h4 d-inline-block mb-3">Quality RO Products</a>
+                                            <p class="mb-0">
+                                                Choose from reliable water purification solutions designed to
+                                                provide clean and safe drinking water for your home or workplace.
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Button -->
+                        <!-- <a href="about" class="btn btn-secondary rounded-pill py-3 px-5">Read More</a> -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Fact Counter -->
+    <div class="container-fluid counter py-5" id="client">
+        <div class="container py-5">
+            <div class="row g-5">
+
+                <!-- Happy Clients -->
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="counter-item">
+                        <div class="counter-item-icon mx-auto">
+                            <i class="fas fa-thumbs-up fa-3x text-white"></i>
+                        </div>
+
+                        <h4 class="text-white my-4">Happy Clients</h4>
+
+                        <div class="counter-counting">
+                            <span class="text-white fs-2 fw-bold" data-toggle="counter-up">30</span>
+                            <span class="h1 fw-bold text-white">+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transport -->
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="counter-item">
+                        <div class="counter-item-icon mx-auto">
+                            <i class="fas fa-truck fa-3x text-white"></i>
+                        </div>
+
+                        <h4 class="text-white my-4">Delivered</h4>
+
+                        <div class="counter-counting">
+                            <span class="text-white fs-2 fw-bold" data-toggle="counter-up">50</span>
+                            <span class="h1 fw-bold text-white">+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instalations -->
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="counter-item">
+                        <div class="counter-item-icon mx-auto">
+                            <i class="fas fa-users fa-3x text-white"></i>
+                        </div>
+
+                        <h4 class="text-white my-4">Instalations </h4>
+
+                        <div class="counter-counting">
+                            <span class="text-white fs-2 fw-bold" data-toggle="counter-up">53</span>
+                            <span class="h1 fw-bold text-white">+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="counter-item">
+                        <div class="counter-item-icon mx-auto">
+                            <i class="fas fa-heart fa-3x text-white"></i>
+                        </div>
+
+                        <h4 class="text-white my-4">Services</h4>
+
+                        <div class="counter-counting">
+                            <span class="text-white fs-2 fw-bold" data-toggle="counter-up">17</span>
+                            <span class="h1 fw-bold text-white">+</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Fact Counter -->
+
+    <!-- Products Start -->
+    <div class="container-fluid product py-5" id="products">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-uppercase text-primary">Our Products</h4>
+                <h1 class="display-3 text-capitalize mb-3">We Deliver Best Quality Bottle Packs.</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="product-item">
+                        <img src="img/product-3.png" class="img-fluid w-100 rounded-top" alt="Image">
+                        <div class="product-content bg-light text-center rounded-bottom p-4">
+                            <p>2L 1 Bottle</p>
+                            <a href="#" class="h4 d-inline-block mb-3">Mineral Water Bottle</a>
+                            <p class="fs-4 text-primary mb-3">$35:00</p>
+                            <a href="tel:+919471377638" class="btn btn-secondary rounded-pill py-2 px-4">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="product-item">
+                        <img src="img/product-2.png" class="img-fluid w-100 rounded-top" alt="Image">
+                        <div class="product-content bg-light text-center rounded-bottom p-4">
+                            <p>4L 2 Bottles</p>
+                            <a href="#" class="h4 d-inline-block mb-3">RO Water Bottle</a>
+                            <p class="fs-4 text-primary mb-3">$70:00</p>
+                            <a href="tel:+919471377638" class="btn btn-secondary rounded-pill py-2 px-4">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="product-item">
+                        <img src="img/product-1.png" class="img-fluid w-100 rounded-top" alt="Image">
+                        <div class="product-content bg-light text-center rounded-bottom p-4">
+                            <p>6L 3 Bottles</p>
+                            <a href="#" class="h4 d-inline-block mb-3">UV Water Bottle</a>
+                            <p class="fs-4 text-primary mb-3">$100:00</p>
+                            <a href="tel:+919471377638" class="btn btn-secondary rounded-pill py-2 px-4">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Products End -->
+
+    <!-- Service Highlights Start -->
+    <div class="container-fluid blog pb-5" id="services">
+        <div class="container pb-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-uppercase text-primary">Our Solutions</h4>
+                <h1 class="display-3 text-capitalize mb-3">Sales, Service & Support</h1>
+                <p class="mb-0">We provide complete solutions with professional sales, installation, service,
+                    maintenance and annual maintenance support.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/sales.jpg" class="img-fluid rounded-top w-100" height="100"
+                                alt="Sales Services">
+                        </div>
+                        <div class="blog-content rounded-bottom p-4">
+                            <a href="#" class="h4 d-inline-block mb-3">Sales</a>
+                            <p>Quality products and solutions tailored to meet your business and operational
+                                requirements.</p>
+                            <a href="#" class="fw-bold text-secondary">Read More <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/service.jpg" class="img-fluid rounded-top w-10" height="10" alt="Service">
+                        </div>
+                        <div class="blog-content rounded-bottom p-4">
+                            <a href="#" class="h4 d-inline-block mb-3">Service</a>
+                            <p>Professional technical service and troubleshooting to keep your systems running smoothly.
+                            </p>
+                            <a href="#" class="fw-bold text-secondary">Read More <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/installation.jpg" class="img-fluid rounded-top w-100" alt="Installation">
+                        </div>
+                        <div class="blog-content rounded-bottom p-4">
+                            <a href="#" class="h4 d-inline-block mb-3">Installation</a>
+                            <p>Complete installation and commissioning services by experienced technical professionals.
+                            </p>
+                            <a href="#" class="fw-bold text-secondary">Read More <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/amc.jpg" class="img-fluid rounded-top w-100" alt="AMC Services">
+                        </div>
+                        <div class="blog-content rounded-bottom p-4">
+                            <a href="#" class="h4 d-inline-block mb-3">AMC</a>
+                            <p>Annual Maintenance Contracts to ensure reliable performance, preventive maintenance and
+                                timely support.</p>
+                            <a href="#" class="fw-bold text-secondary">Read More <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service Highlights End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid testimonial pb-5" id="blog">
+        <div class="container pb-5">
+
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-uppercase text-primary">Testimonials</h4>
+                <h1 class="display-3 text-capitalize mb-3">What Our Clients Say</h1>
+                <p class="mb-0">Our commitment to quality, reliable service and timely support has helped us build
+                    strong relationships with our clients.</p>
+            </div>
+
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.3s">
+
+                <!-- Testimonial 1 -->
+                <div class="testimonial-item text-center p-4">
+                    <p>We are very satisfied with their transportation and fleet management services. Their team is
+                        professional, responsive and always focused on delivering reliable solutions.</p>
+                    <div class="d-flex justify-content-center mb-4">
+                        <img src="img/testimonial-1.jpg" class="img-fluid border border-4 border-primary"
+                            style="width: 100px; height: 100px; border-radius: 50px; object-fit: cover;" alt="Client">
+                    </div>
+                    <div class="d-block">
+                        <h4 class="text-dark">Rajesh Kumar</h4>
+                        <div class="d-flex justify-content-center text-secondary">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-item text-center p-4">
+                    <p>The installation and commissioning work was completed professionally and on time. Their technical
+                        team provided excellent support throughout the entire project.</p>
+                    <div class="d-flex justify-content-center mb-4">
+                        <img src="img/testimonial-2.jpg" class="img-fluid border border-4 border-primary"
+                            style="width: 100px; height: 100px; border-radius: 50px; object-fit: cover;" alt="Client">
+                    </div>
+                    <div class="d-block">
+                        <h4 class="text-dark">Amit Sharma</h4>
+                        <div class="d-flex justify-content-center text-secondary">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-item text-center p-4">
+                    <p>Their service and AMC support have been excellent. Whenever we need technical assistance, their
+                        team responds quickly and resolves the issue efficiently.</p>
+                    <div class="d-flex justify-content-center mb-4">
+                        <img src="img/testimonial-3.jpg" class="img-fluid border border-4 border-primary"
+                            style="width: 100px; height: 100px; border-radius: 50px; object-fit: cover;" alt="Client">
+                    </div>
+                    <div class="d-block">
+                        <h4 class="text-dark">Sanjay Verma</h4>
+                        <div class="d-flex justify-content-center text-secondary">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-item text-center p-4">
+                    <p>We appreciate their commitment to quality and customer support. From product supply to
+                        installation and after-sales service, the overall experience has been very good.</p>
+                    <div class="d-flex justify-content-center mb-4">
+                        <img src="img/testimonial-4.jpg" class="img-fluid border border-4 border-primary"
+                            style="width: 100px; height: 100px; border-radius: 50px; object-fit: cover;" alt="Client">
+                    </div>
+                    <div class="d-block">
+                        <h4 class="text-dark">Vivek Singh</h4>
+                        <div class="d-flex justify-content-center text-secondary">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- Owner & Contact Section Start -->
+    <div class="container-fluid py-5 bg-light" id="contact">
+        <div class="container">
+            <div class="row align-items-center g-4">
+
+                <!-- Owner Photo -->
+                <div class="col-lg-4 text-center">
+                    <img src="img/profile.png" alt="Deepak Kumar - Owner" class="img-fluid rounded-4 shadow"
+                        style="width:100%; max-width:320px; height:350px; object-fit:cover;">
+                </div>
+
+                <!-- Owner Details -->
+                <div class="col-lg-4">
+                    <p class="text-primary text-uppercase fw-bold mb-2">Meet the Owner</p>
+
+                    <h2 class="fw-bold mb-2">Deepak Kumar</h2>
+
+                    <h6 class="text-primary mb-3">Founder &amp; Owner | AquaCare Tech Solutions</h6>
+
+                    <p class="text-muted mb-3">
+                        We are committed to providing reliable, quality-focused
+                        solutions and excellent customer service. Our goal is
+                        to build lasting relationships through trust and honest service.
+                    </p>
+
+                    <a href="https://wa.me/919471377638" target="_blank" rel="noopener"
+                        class="btn btn-primary rounded-pill px-4">
+                        <i class="fab fa-whatsapp me-2"></i>Contact on WhatsApp
+                    </a>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="col-lg-4">
+                    <h4 class="fw-bold mb-4">Get In Touch</h4>
+
+                    <p class="mb-3">
+                        <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                        Ranchi, Jharkhand, India
+                    </p>
+
+                    <p class="mb-3">
+                        <i class="fas fa-phone text-primary me-2"></i>
+                        <a href="tel:+919471377638" class="text-dark text-decoration-none">+91 9471377638</a>
+                    </p>
+
+                    <p class="mb-3">
+                        <i class="fas fa-envelope text-primary me-2"></i>
+                        <a href="mailto:sharmaraunak65792@gmail.com"
+                            class="text-dark text-decoration-none">sharmaraunak65792@gmail.com</a>
+                    </p>
+
+                    <div class="d-flex gap-2 mt-4">
+                        <a class="btn btn-primary btn-sm rounded-circle" href="https://wa.me/919471377638"
+                            target="_blank" rel="noopener" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+
+                        <a class="btn btn-primary btn-sm rounded-circle" href="mailto:sharmaraunak65792@gmail.com"
+                            aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Owner & Contact Section End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-body"><a href="#" class="border-bottom text-white"><i
+                                class="fas fa-copyright text-light me-2"></i>AquaCare Tech Solutions</a>, All right
+                        reserved.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end text-body">
+                    Designed By <a class="border-bottom text-white" href="https://iamdeepkr.github.io/">Deepak Kumar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-secondary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbar = document.querySelector(".navbar");
+            const menu = document.getElementById("navbarCollapse");
+            const toggler = document.querySelector(".navbar-toggler");
+
+            if (!navbar || !menu) return;
+
+            const sectionIds = [
+                "home",
+                "about",
+                "services",
+                "products",
+                "testimonials",
+                "blog",
+                "contact"
+            ];
+
+            const sections = sectionIds
+                .map(id => document.getElementById(id))
+                .filter(Boolean);
+
+            const navLinks = navbar.querySelectorAll(
+                '.navbar-nav a.nav-link[href^="#"]'
+            );
+
+            // Close mobile navigation menu
+            function closeMobileMenu() {
+                if (window.innerWidth >= 992) return;
+
+                menu.classList.remove("show");
+                menu.classList.remove("collapsing");
+                menu.classList.add("collapse");
+                menu.style.removeProperty("height");
+                menu.style.removeProperty("overflow");
+
+                if (toggler) {
+                    toggler.classList.add("collapsed");
+                    toggler.setAttribute("aria-expanded", "false");
+                }
+
+                // Close any open dropdown inside the mobile menu
+                menu.querySelectorAll(".dropdown-menu.show").forEach(function (dropdown) {
+                    dropdown.classList.remove("show");
+                });
+
+                menu.querySelectorAll(".dropdown-toggle").forEach(function (toggle) {
+                    toggle.setAttribute("aria-expanded", "false");
+                });
+            }
+
+            // Update active navigation link
+            function updateActiveLink() {
+                if (!sections.length) return;
+
+                let currentId = sections[0].id;
+                const offset = 140;
+
+                sections.forEach(function (section) {
+                    if (section.getBoundingClientRect().top <= offset) {
+                        currentId = section.id;
+                    }
+                });
+
+                navLinks.forEach(function (link) {
+                    const href = link.getAttribute("href");
+                    link.classList.toggle("active", href === "#" + currentId);
+                });
+            }
+
+            // Handle clicks on section navigation links
+            document.addEventListener("click", function (event) {
+                const link = event.target.closest(
+                    "#navbarCollapse a.nav-link, #navbarCollapse a.dropdown-item"
+                );
+
+                if (!link) return;
+
+                const href = link.getAttribute("href");
+
+                // Close after selecting an in-page section
+                if (href && href.startsWith("#") && href.length > 1) {
+                    closeMobileMenu();
+
+                    const target = document.querySelector(href);
+
+                    if (target) {
+                        navLinks.forEach(function (item) {
+                            item.classList.toggle(
+                                "active",
+                                item.getAttribute("href") === href
+                            );
+                        });
+                    }
+                }
+            });
+
+            window.addEventListener("scroll", updateActiveLink, {passive: true});
+            window.addEventListener("resize", updateActiveLink);
+            window.addEventListener("load", updateActiveLink);
+
+            updateActiveLink();
+        });
+    </script>
+
+</body>
+
+</html>
