@@ -940,3 +940,10 @@
         object-fit: contain;
     }
 }
+
+.email-circle {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    flex-shrink: 0;
+}
